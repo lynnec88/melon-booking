@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h2>Your Bookings</h2>
+    {% if appointments %}
+        <ul>
+            {% for appointment in appointments %}
+                <li>Date: {{ appointment.date_str }}</li>
+                <li>Time: {{ appointment.time }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No scheduled appointments found.</p>
+    {% endif %}
+{% endblock %}

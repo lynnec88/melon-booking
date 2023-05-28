@@ -1,0 +1,88 @@
+body {
+    background: url("/static/css/melon1.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #6DFCE4;
+    padding: 20px;
+    margin: 0;
+  }
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #FC6C85;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  padding-top: var(--bs-gutter-x,1rem);
+  margin-right: auto;
+  margin-left: auto;
+  background-color: hsla(120, 100%, 50%, 0.3);
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: 'Oleo Script', Helvetica, sans-serif;
+}
+
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+
+.bg-dark {
+  background-color: #FC6C85!important;
+}
+
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* required because fixed position */
+}

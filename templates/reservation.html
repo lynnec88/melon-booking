@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>Find availability!</h2>
+<form action="/availability" method="GET">
+    <p>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+    </p>
+    <p>
+        <label for="start_time">Start Time:</label>
+            <select id="start_time" name="start_time" required>
+                <option value="" disabled selected>Select Start Time</option>
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:00">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:00">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+            </select>
+        </p>
+        <p>
+            <label for="end_time">End Time:</label>
+            <select id="end_time" name="end_time" required>
+                <option value="" disabled selected>Select End Time</option>
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:00">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:00">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+            </select>
+        </p>
+
+        <button type="submit">Check Availability</button>
+</form>
+<h3>Already have a booking?</h3>
+<p><a href="/scheduled-appointments">View your bookings</a></p>
+
+{% endblock %}

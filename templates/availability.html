@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h2>Available Times</h2>
+    <p>Find a time slot between <b>{{ start_time }}</b> and <b>{{ end_time }}</b> on <b>{{ date }}</b></p>
+
+    {% if available_times %}
+        <ul>
+            {% for time in available_times %}
+                {% if time in unavailable_times %}
+                    <li>{{ time }} (booked)</li>
+                {% else %}
+                    <li><a href="{{ url_for('book_reservation', time=time, date=date) }}">{{ time }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No available times for the selected criteria.</p>
+    {% endif %}
+{% endblock %}
