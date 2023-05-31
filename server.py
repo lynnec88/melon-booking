@@ -5,6 +5,8 @@ import os
 import crud
 
 app = Flask(__name__)
+env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+app.config.from_object(env_config)
 app.secret_key = "SECRET_KEY"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "postgresql:///melonbooking")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
