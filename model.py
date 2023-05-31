@@ -34,7 +34,7 @@ class Booking(db.Model):
 def connect_to_db(app):
     """Connect the database to Flask app"""
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///melonbooking'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://melonbooking_user:bAkmE8vhyNA1D2vnWY4PwWeNIgDMdD5Z@dpg-chrqer1mbg582kdmgq40-a/melonbooking'
     app.config['SQLALCHEMY_ECHO'] = False
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
